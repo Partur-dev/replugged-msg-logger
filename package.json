@@ -1,7 +1,7 @@
 {
-  "name": "plugin-template",
+  "name": "replugged-msg-logger",
   "version": "1.0.0",
-  "description": "A plugin template",
+  "description": "Message logger",
   "engines": {
     "node": ">=14.0.0"
   },
