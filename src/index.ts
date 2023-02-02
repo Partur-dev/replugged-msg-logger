@@ -15,6 +15,7 @@ export async function start(): Promise<void> {
   const registerMod = await webpack.waitForModule<{
     _actionHandlers: {
       _orderedActionHandlers: {
+        // eslint-disable-next-line
         MESSAGE_DELETE?: {
           actionHandler: (msg: Message) => void;
         }[];
@@ -24,18 +25,19 @@ export async function start(): Promise<void> {
 
   const messageDelete = registerMod._actionHandlers._orderedActionHandlers.MESSAGE_DELETE;
 
+  // eslint-disable-next-line
   if (messageDelete == undefined) {
     setTimeout(start, 1000);
     return;
   }
 
-  const handler = messageDelete!.find((x) =>
+  const handler = messageDelete.find((x) =>
     x.actionHandler.toString().includes("revealedMessageId"),
   )!;
 
   const origActionHandler = handler.actionHandler;
 
-  const applyStyles = (msg: Message) => {
+  const applyStyles = (msg: Message): void => {
     const el = document.querySelector(`#chat-messages-${msg.channelId}-${msg.id}`)!;
     if (el.classList.contains("deleted")) return;
 
