@@ -1,16 +1,16 @@
 {
-  "id": "dev.replugged.PluginTemplate",
-  "name": "Plugin Template",
-  "description": "A plugin template",
+  "id": "com.partur.MessageLogger",
+  "name": "Message Logger",
+  "description": "Message logger",
   "author": {
-    "name": "replugged",
-    "discordID": "1000992611840049192",
-    "github": "replugged-org"
+    "name": "partur",
+    "discordID": "497770123604525057",
+    "github": "partur-dev"
   },
   "version": "1.0.0",
   "updater": {
     "type": "github",
-    "id": "replugged-org/plugin-template"
+    "id": "partur-dev/replugged-msg-logger"
   },
   "license": "MIT",
   "type": "replugged-plugin",

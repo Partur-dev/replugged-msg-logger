@@ -1,0 +1,7 @@
+.deleted {
+  filter: grayscale(1);
+}
+
+.deleted:hover {
+  filter: grayscale(0);
+}
